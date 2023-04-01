@@ -1,5 +1,7 @@
 module main(
 	input CLK,
+	input [3:0] KEY,
+	input RES,
 	output [3:0] DIG,
 	output [7:0] SEG,
 	output [3:0] SEcs
@@ -7,16 +9,17 @@ module main(
 	reg [25:0] cnt = 26'd0;
 	reg [25:0] cnt2 = 26'd0;
 	
-	reg [3:0] SEC = 6'd0;
-	reg [3:0] SEC2 = 6'd0;
-	reg [3:0] MIN = 6'd0;
-	reg [3:0] MIN2 = 6'd0;
-	reg [3:0] HRS = 5'd0;
-	reg [3:0] HRS2 = 5'd0;
+	reg [3:0] SEC = 4'd0;
+	reg [3:0] SEC2 = 4'd0;
+	reg [3:0] MIN = 4'd0;
+	reg [3:0] MIN2 = 4'd0;
+	reg [3:0] HRS = 4'd0;
+	reg [3:0] HRS2 = 4'd0;
 	
 	wire [6:0] segments;
 	wire [3:0] code;
 	enum reg [1:0] {SHN, FHN, SMN, FMN} state = FMN;
+	enum reg [2:0] {IDLE, INCCLK, DECCLK, INCMIN, DECMIN, RESSEC} bstate = IDLE;
 	
 	assign SEcs = ~SEC;
 	
@@ -46,13 +49,62 @@ module main(
 									HRS2 <= 4'd0;
 									HRS <= 4'd0;
 								end
+							end
 						end
 					end
 				end
+			end
+			if (~KEY[0]) begin
+				HRS <= HRS + 4'd1;
+				if (HRS == 4'd9) begin
+					HRS <= 4'd0;
+					HRS2 <= HRS2 + 4'd1;
+					if (HRS2 == 4'd2 & HRS == 4'd3) begin
+						HRS2 <= 4'd0;
+						HRS <= 4'd0;
+					end
 				end
+			end
+			if (~KEY[1]) begin
+				HRS <= HRS - 4'd1;
+				if (HRS == 4'd0) begin
+					HRS <= 4'd9;
+					HRS2 <= HRS2 - 4'd1;
+					if (HRS2 == 4'd0 & HRS == 4'd0) begin
+						HRS2 <= 4'd2;
+						HRS <= 4'd3;
+					end
+				end
+			end 
+			if (~KEY[2]) begin
+				MIN <= MIN + 4'd1;
+				if (MIN == 4'd9) begin
+					MIN <= 4'd0;
+					MIN2 <= MIN2 + 4'd1;
+					if (MIN2 == 4'd5 & MIN == 4'd9) begin
+						MIN2 <= 4'd0;
+						MIN <= 4'd0;
+					end
+				end
+			end
+			if (~KEY[3]) begin
+				MIN <= MIN - 4'd1;
+				if (MIN == 4'd0) begin
+					MIN <= 4'd9;
+					MIN2 <= MIN2 - 4'd1;
+					if (MIN2 == 4'd0 & MIN == 4'd0) begin
+						MIN2 <= 4'd5;
+						MIN <= 4'd9;
+					end
+				end
+			end
+			if (~RES) begin
+				SEC2 <= 4'd0;
+				SEC <= 4'd0;
 			end
 		end
 	end
+	
 	
 	
 	
@@ -66,21 +118,25 @@ module main(
 					DIG <= 4'b1110;
 					code <= MIN;
 					state <= SMN;
+					SEG[7] <= 1;
 				end
 				SMN: begin
 					DIG <= 4'b1101;
 					code <= MIN2;
 					state <= FHN;
+					SEG[7] <= 1;
 				end
 				FHN: begin
 					DIG <= 4'b1011;
 					code <= HRS;
 					state <= SHN;
+					SEG[7] <= 0;
 				end
 				SHN: begin
 					DIG <= 4'b0111;
 					code <= HRS2;
 					state <= FMN;
+					SEG[7] <= 1;
 				end
 			endcase
 		end
@@ -98,7 +154,7 @@ module main(
 		assign SEG[4] = ~segments[4];
 		assign SEG[5] = ~segments[5];
 		assign SEG[6] = ~segments[6];
-		assign SEG[7] = 1;
+		
 
 endmodule 
 
