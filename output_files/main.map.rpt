@@ -1,6 +1,6 @@
 Analysis & Synthesis report for main
-Thu Mar 23 12:45:11 2023
-Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Sat Apr  1 20:22:22 2023
+Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
 ---------------------
@@ -26,7 +26,7 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -46,16 +46,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 23 12:45:11 2023          ;
-; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr  1 20:22:22 2023          ;
+; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; main                                           ;
 ; Top-level Entity Name              ; main                                           ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 151                                            ;
-;     Total combinational functions  ; 148                                            ;
-;     Dedicated logic registers      ; 88                                             ;
-; Total registers                    ; 88                                             ;
-; Total pins                         ; 17                                             ;
+; Total logic elements               ; 182                                            ;
+;     Total combinational functions  ; 179                                            ;
+;     Dedicated logic registers      ; 89                                             ;
+; Total registers                    ; 89                                             ;
+; Total pins                         ; 22                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -166,13 +166,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path     ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------+---------+
-; main.sv                          ; yes             ; User SystemVerilog HDL File  ; F:/Projects/Qatrus/clock/main.sv ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                           ;
++----------------------------------+-----------------+------------------------------+------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path       ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------+---------+
+; main.sv                          ; yes             ; User SystemVerilog HDL File  ; F:/Projects/FPGAClock-main/main.sv ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -180,30 +180,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 151       ;
+; Estimated Total logic elements              ; 182       ;
 ;                                             ;           ;
-; Total combinational functions               ; 148       ;
+; Total combinational functions               ; 179       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 55        ;
-;     -- 3 input functions                    ; 17        ;
-;     -- <=2 input functions                  ; 76        ;
+;     -- 4 input functions                    ; 62        ;
+;     -- 3 input functions                    ; 22        ;
+;     -- <=2 input functions                  ; 95        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 98        ;
-;     -- arithmetic mode                      ; 50        ;
+;     -- normal mode                          ; 117       ;
+;     -- arithmetic mode                      ; 62        ;
 ;                                             ;           ;
-; Total registers                             ; 88        ;
-;     -- Dedicated logic registers            ; 88        ;
+; Total registers                             ; 89        ;
+;     -- Dedicated logic registers            ; 89        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 17        ;
+; I/O pins                                    ; 22        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 88        ;
-; Total fan-out                               ; 646       ;
-; Average fan-out                             ; 2.39      ;
+; Maximum fan-out                             ; 89        ;
+; Total fan-out                               ; 763       ;
+; Average fan-out                             ; 2.45      ;
 +---------------------------------------------+-----------+
 
 
@@ -212,7 +212,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+-------------+--------------+
-; |main                      ; 148 (141)           ; 88 (88)                   ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |main                 ; main        ; work         ;
+; |main                      ; 179 (172)           ; 89 (89)                   ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |main                 ; main        ; work         ;
 ;    |indicator16:dec|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|indicator16:dec ; indicator16 ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -247,12 +247,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 88    ;
+; Total registers                              ; 89    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 9     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 27    ;
+; Number of registers using Clock Enable       ; 36    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -262,7 +262,13 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |main|code[3]              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|SEC[0]               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |main|code[0]              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|SEC2[0]              ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |main|MIN[3]               ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |main|HRS[3]               ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |main|HRS2[2]              ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |main|MIN2[3]              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -271,22 +277,24 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 17                          ;
-; cycloneiii_ff         ; 88                          ;
+; boundary_port         ; 22                          ;
+; cycloneiii_ff         ; 89                          ;
 ;     ENA               ; 27                          ;
-;     plain             ; 61                          ;
-; cycloneiii_lcell_comb ; 154                         ;
-;     arith             ; 50                          ;
-;         2 data inputs ; 50                          ;
-;     normal            ; 104                         ;
+;     ENA SLD           ; 9                           ;
+;     plain             ; 53                          ;
+; cycloneiii_lcell_comb ; 184                         ;
+;     arith             ; 62                          ;
+;         2 data inputs ; 54                          ;
+;         3 data inputs ; 8                           ;
+;     normal            ; 122                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 17                          ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 17                          ;
-;         4 data inputs ; 55                          ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 62                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.30                        ;
+; Average LUT depth     ; 3.14                        ;
 +-----------------------+-----------------------------+
 
 
@@ -304,36 +312,29 @@ Encoding Type:  One-Hot
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Thu Mar 23 12:45:02 2023
+    Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+    Info: Processing started: Sat Apr  1 20:22:07 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off clock -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file main.sv
-    Info (12023): Found entity 1: main File: F:/Projects/Qatrus/clock/main.sv Line: 1
-    Info (12023): Found entity 2: indicator16 File: F:/Projects/Qatrus/clock/main.sv Line: 105
+    Info (12023): Found entity 1: main File: F:/Projects/FPGAClock-main/main.sv Line: 1
+    Info (12023): Found entity 2: indicator16 File: F:/Projects/FPGAClock-main/main.sv Line: 161
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at main.sv(10): truncated value with size 6 to match size of target (4) File: F:/Projects/Qatrus/clock/main.sv Line: 10
-Warning (10230): Verilog HDL assignment warning at main.sv(11): truncated value with size 6 to match size of target (4) File: F:/Projects/Qatrus/clock/main.sv Line: 11
-Warning (10230): Verilog HDL assignment warning at main.sv(12): truncated value with size 6 to match size of target (4) File: F:/Projects/Qatrus/clock/main.sv Line: 12
-Warning (10230): Verilog HDL assignment warning at main.sv(13): truncated value with size 6 to match size of target (4) File: F:/Projects/Qatrus/clock/main.sv Line: 13
-Warning (10230): Verilog HDL assignment warning at main.sv(14): truncated value with size 5 to match size of target (4) File: F:/Projects/Qatrus/clock/main.sv Line: 14
-Warning (10230): Verilog HDL assignment warning at main.sv(15): truncated value with size 5 to match size of target (4) File: F:/Projects/Qatrus/clock/main.sv Line: 15
-Info (12128): Elaborating entity "indicator16" for hierarchy "indicator16:dec" File: F:/Projects/Qatrus/clock/main.sv Line: 92
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SEG[7]" is stuck at VCC File: F:/Projects/Qatrus/clock/main.sv Line: 4
+Warning (10036): Verilog HDL or VHDL warning at main.sv(22): object "bstate" assigned a value but never read File: F:/Projects/FPGAClock-main/main.sv Line: 22
+Info (12128): Elaborating entity "indicator16" for hierarchy "indicator16:dec" File: F:/Projects/FPGAClock-main/main.sv Line: 148
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 168 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
+Info (21057): Implemented 204 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 151 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4781 megabytes
-    Info: Processing ended: Thu Mar 23 12:45:11 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:16
+    Info (21061): Implemented 182 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4767 megabytes
+    Info: Processing ended: Sat Apr  1 20:22:22 2023
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:23
 
 

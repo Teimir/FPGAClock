@@ -1,6 +1,6 @@
 Assembler report for main
-Thu Mar 23 12:45:18 2023
-Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Sat Apr  1 20:22:32 2023
+Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
 ---------------------
@@ -10,7 +10,7 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: F:/Projects/Qatrus/clock/output_files/main.sof
+  5. Assembler Device Options: F:/Projects/FPGAClock-main/output_files/main.sof
   6. Assembler Messages
 
 
@@ -18,7 +18,7 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Mar 23 12:45:18 2023 ;
+; Assembler Status      ; Successful - Sat Apr  1 20:22:32 2023 ;
 ; Revision Name         ; main                                  ;
 ; Top-level Entity Name ; main                                  ;
 ; Family                ; Cyclone IV E                          ;
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+------------------------------------------------+
-; Assembler Generated Files                      ;
-+------------------------------------------------+
-; File Name                                      ;
-+------------------------------------------------+
-; F:/Projects/Qatrus/clock/output_files/main.sof ;
-+------------------------------------------------+
++--------------------------------------------------+
+; Assembler Generated Files                        ;
++--------------------------------------------------+
+; File Name                                        ;
++--------------------------------------------------+
+; F:/Projects/FPGAClock-main/output_files/main.sof ;
++--------------------------------------------------+
 
 
-+--------------------------------------------------------------------------+
-; Assembler Device Options: F:/Projects/Qatrus/clock/output_files/main.sof ;
-+----------------+---------------------------------------------------------+
-; Option         ; Setting                                                 ;
-+----------------+---------------------------------------------------------+
-; JTAG usercode  ; 0x000A5EB7                                              ;
-; Checksum       ; 0x000A5EB7                                              ;
-+----------------+---------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Assembler Device Options: F:/Projects/FPGAClock-main/output_files/main.sof ;
++----------------+-----------------------------------------------------------+
+; Option         ; Setting                                                   ;
++----------------+-----------------------------------------------------------+
+; JTAG usercode  ; 0x000AAF97                                                ;
+; Checksum       ; 0x000AAF97                                                ;
++----------------+-----------------------------------------------------------+
 
 
 +--------------------+
@@ -77,15 +77,15 @@ https://fpgasoftware.intel.com/eula.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Thu Mar 23 12:45:17 2023
+    Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+    Info: Processing started: Sat Apr  1 20:22:31 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off clock -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4713 megabytes
-    Info: Processing ended: Thu Mar 23 12:45:18 2023
+    Info: Peak virtual memory: 4706 megabytes
+    Info: Processing ended: Sat Apr  1 20:22:32 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
