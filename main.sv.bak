@@ -1,4 +1,0 @@
-module main(
-	input CLK,
-	output [1:0] DIG,
-);
