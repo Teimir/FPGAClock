@@ -45,10 +45,10 @@ module main(
 							if (HRS == 4'd9) begin
 								HRS <= 4'd0;
 								HRS2 <= HRS2 + 4'd1;
-								if (HRS2 == 4'd2 & HRS == 4'd3) begin
+							end
+							else if (HRS2 == 4'd2 & HRS == 4'd3) begin
 									HRS2 <= 4'd0;
 									HRS <= 4'd0;
-								end
 							end
 						end
 					end
@@ -59,10 +59,10 @@ module main(
 				if (HRS == 4'd9) begin
 					HRS <= 4'd0;
 					HRS2 <= HRS2 + 4'd1;
-					if (HRS2 == 4'd2 & HRS == 4'd3) begin
+				end
+				else if (HRS2 == 4'd2 & HRS == 4'd3) begin
 						HRS2 <= 4'd0;
 						HRS <= 4'd0;
-					end
 				end
 			end
 			if (~KEY[1]) begin
